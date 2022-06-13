@@ -23,7 +23,7 @@ export const Title = styled.legend`
 
 `;
 export const Legend = styled.input`
- border-radius: 10px;
+    border-radius: 10px;
     font-size: 22px;
     background-color: aqua;
     border: 0;
@@ -36,7 +36,6 @@ export const Body = styled.textarea<ContainerProps>`
     color: ${props => props.fontcolor};
     min-height: 200px;
     height: 100%;
-    resize: none;
 
 `;
 
