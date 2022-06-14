@@ -4,11 +4,11 @@ Esta é uma simples aplicaçao criada com o vite, uma single page em react + Typ
 #
 ## Iniciando
 
-    Apos clonar o repositorio vamos instalar instalar as dependencias rodando o comando npm install, ao terminar de instalar as dependencias nossa aplicação esta pronta para rodar, mas antes de inciar é importante verificar o endereço da api que esta requisitando e caso necessite alterar a url, basta acessar o arquivo src\api.ts.
+Apos clonar o repositorio vamos instalar instalar as dependencias rodando o comando npm install, ao terminar de instalar as dependencias nossa aplicação esta pronta para rodar, mas antes de inciar é importante verificar o endereço da api que esta requisitando e caso necessite alterar a url, basta acessar o arquivo src\api.ts.
 
     Revisado o caminho da api basta rodar o comando npm run dev
 
 ## Sobre
 
-    Este projeto não possui rotas, por se referir a uma landing page, estruturado com grid template, a aplicação é 100% responsiva. 
+Este projeto não possui rotas, por se referir a uma landing page, estruturado com grid template, a aplicação é 100% responsiva. 
     
