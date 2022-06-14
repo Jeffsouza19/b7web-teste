@@ -12,17 +12,17 @@ export const NoteForm = ({ onAdd }: Props) => {
 
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-    const [bgcolor, setColor] = useState('gray');
-    const [fontcolor, setFontColor] = useState('black');
+    const [bgcolor, setColor] = useState('GRAY');
+    const [fontcolor, setFontColor] = useState('BLACK');
     const bgcolors = [
-        { id: 1, name: 'red' },
-        { id: 2, name: 'blue' },
-        { id: 3, name: 'green' },
-        { id: 4, name: 'gray' },
+        { id: 1, name: 'RED' },
+        { id: 2, name: 'BLUE' },
+        { id: 3, name: 'GREEN' },
+        { id: 4, name: 'GRAY' },
     ];
     const fontcolors = [
-        { id: 0, name: 'black' },
-        { id: 1, name: 'white' },
+        { id: 0, name: 'BLACK' },
+        { id: 1, name: 'WHITE' },
     ]
 
     const addtitlechange = (e: ChangeEvent<HTMLInputElement>) => {

@@ -35,7 +35,7 @@ export const NoteItem = ({ data, onUpdate, onDelete }: Props) => {
             <C.Title><C.Legend onChange={addtitlechange} value={title} /></C.Title>
             <C.Body bgcolor={data.bgcolor} fontcolor={data.fontcolor} onChange={addbodychange} value={body}></C.Body>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <C.Button onClick={updatenote} bgcolor='green' >Save</C.Button>
+                <C.Button onClick={updatenote} bgcolor='green' >Salvar</C.Button>
                 <C.Button onClick={delnote} bgcolor='red'>Deletar</C.Button>
             </div>
         </C.Container>

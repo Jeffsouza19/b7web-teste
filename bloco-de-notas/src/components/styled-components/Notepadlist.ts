@@ -11,17 +11,14 @@ export const Container = styled.fieldset<ContainerProps>`
     flex-flow: column wrap;
     background-color: ${props => props.bgcolor};
     flex: 1;
-    max-width: 350px;
-    margin: 20px;
-    
 `;
+
 export const Title = styled.legend`
     border-radius: 10px;
     color: red;
     background-color: aqua;
-
-
 `;
+
 export const Legend = styled.input`
     border-radius: 10px;
     font-size: 22px;
@@ -34,8 +31,7 @@ export const Body = styled.textarea<ContainerProps>`
     font-size: 18px;
     background-color: ${props => props.bgcolor};
     color: ${props => props.fontcolor};
-    min-height: 200px;
-    height: 100%;
+    height: 80%;
 
 `;
 

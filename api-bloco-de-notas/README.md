@@ -1,64 +1,39 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# API Bloco de Notas
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+-   Api construida em laravel 9, para fornecer dados para uma simples aplicaçao de bloco de notas, no modelo post it
+#
+## Iniciando o Projeto
 
-## About Laravel
+    Para iniciar o projeto, clone o repositorio para sua maquina, após feito rode o comando composer install para instalar as dependencias necessarias.
+    Renomeie o arquivo .env.example para .env e configure o seu banco de dados para iniciar a aplicação
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+    Após realizar as configurações rodar o comando php artisan migrate para a criaçao do banco de dados
+    Com tudo confgurado basta rodar o comando php artisan serve para iniciar o servidor, 
+    Pronto, Api em funcionamento.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Sobre as Rotas
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   São 4 rotas basicas que possuem na Api, sendo GET, POST, PUT, DELETE. 
+    para acessar as rotas deve se usar a URL base que foi indicada ao iniciar o servidor seguido de /api/(rota)
 
-## Learning Laravel
+### Rota GET
+    notes
+    Rota que lista as notas cadastradas no banco de dados, ela nao recebe nenhum paramêtro. 
+    Traz como resposta dados da nota como Titulo(title), Anotação(Body), Cor da nota(bgcolor), Cor da letra(fontecolor)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Rota POST
+    note
+    Rota para a adição de uma nova nota, ele precisa de alguns parametros para fazer a inserção.
+    Parametros
+    Title(titulo da anotação) -> parametro obrigatorio
+    Body(texto da anotação) -> parametro opcional
+    Bgcolor(Cor da anotação) -> parametro opcional, quando não é informado tem valor padrao Gray(cinza)
+    Fontcolor(Cor da letra) -> parametro opcional, quando não e informado tem o valor padrao Black(preto)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Rota PUT
+    note/{id}
+    Rota para a edição de uma nota, ela recebe basicamente os mesmos paramentros da rota POST. Pela diferença que aqui necessita de mais um parametro, o id, para indentificar qual nota esta sendo editada.
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Rota DELETE
+    note/{id}
+    Rota para exclusão de uma nota, o unico parametro recebido é o id, para a identificação de qual nota será excluida

@@ -34,6 +34,7 @@ export const Fieldset = styled.fieldset<FieldsetProps>`
 
 export const TextArea = styled.textarea<FieldsetProps>`
     color: ${props => props.fontcolor};
+    font-size: 18px;
     height: 150px;
     background-color: transparent;
 `;

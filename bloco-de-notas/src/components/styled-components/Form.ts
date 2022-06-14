@@ -13,6 +13,7 @@ export const Form = styled.div`
     }
 
     label{
+        font-size: 18px;
         @media (max-width: 420px){
             font-size: 15px;
         }

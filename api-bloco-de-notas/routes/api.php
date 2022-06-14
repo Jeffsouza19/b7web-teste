@@ -15,10 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::get('/notes',[NotepadController::class, 'list'])->name('note.list');
 Route::post('/note', [NotepadController::class, 'newnote'])->name('note.newnote');
 Route::put('/note/{id}', [NotepadController::class, 'updatenote'])->name('note.updatenote');

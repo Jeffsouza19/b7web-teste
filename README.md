@@ -77,3 +77,17 @@
         Get - Para ler          (Read) informações
         Put - Para atualizar    (Update) informações
         Delete - Para excluir   (Delete) infomações
+
+## Sobre a Aplicação
+
+Neste repositorio há duas pastas
+- api-bloco-de-notas
+- bloco de notas
+
+***Api Bloco de notas***
+-   Api feita em laravel
+-   Todas as rotas estarão especificadas dentro do readme da API
+
+***Bloco de notas***
+-   Aplicação feita em react
+-   Todas as especificações estarão dentro do readme da aplicação

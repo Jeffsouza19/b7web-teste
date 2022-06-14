@@ -1,5 +1,4 @@
 import axios from 'axios';
-const BASE = 'http://127.0.0.1:8000/api/';
 
 const http = axios.create({
     baseURL: 'http://127.0.0.1:8000/api/',
@@ -12,7 +11,7 @@ export const api = {
         return response.data;
     },
     addNewNote: async (title: string, body: string, bgcolor: string, fontcolor: string)=>{
-        let response = await http.post('http://127.0.0.1:8000/api/note',{
+        let response = await http.post('note',{
 			title, body, bgcolor, fontcolor
 		});
 		return response.data;
