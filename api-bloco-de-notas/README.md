@@ -4,12 +4,12 @@
 #
 ## Iniciando o Projeto
 
-    Para iniciar o projeto, clone o repositorio para sua maquina, após feito rode o comando composer install para instalar as dependencias necessarias.
-    Renomeie o arquivo .env.example para .env e configure o seu banco de dados para iniciar a aplicação
+Para iniciar o projeto, clone o repositorio para sua maquina, após feito rode o comando composer install para instalar as dependencias necessarias.
+Renomeie o arquivo .env.example para .env e configure o seu banco de dados para iniciar a aplicação
 
-    Após realizar as configurações rodar o comando php artisan migrate para a criaçao do banco de dados
-    Com tudo confgurado basta rodar o comando php artisan serve para iniciar o servidor, 
-    Pronto, Api em funcionamento.
+Após realizar as configurações rodar o comando php artisan migrate para a criaçao do banco de dados
+Com tudo confgurado basta rodar o comando php artisan serve para iniciar o servidor, 
+Pronto, Api em funcionamento.
 
 ## Sobre as Rotas
 
@@ -32,7 +32,8 @@
 
 ### Rota PUT
     note/{id}
-    Rota para a edição de uma nota, ela recebe basicamente os mesmos paramentros da rota POST. Pela diferença que aqui necessita de mais um parametro, o id, para indentificar qual nota esta sendo editada.
+    Rota para a edição de uma nota, ela recebe basicamente os mesmos paramentros da rota POST. 
+    Pela diferença que aqui necessita de mais um parametro, o id, para indentificar qual nota esta sendo editada.
 
 ### Rota DELETE
     note/{id}
